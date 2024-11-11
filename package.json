@@ -23,7 +23,7 @@
     "clsx": "^2.1.1",
     "lucide-react": "^0.456.0",
     "mixpanel-browser": "^2.56.0",
-    "next": "14.0.0",
+    "next": "14.2.17",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.4",

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import SCCLogo from "./scc-logo";
+import SCCLogo from "@/components/scc-logo";
 import { cn } from "@/lib/utils";
 
 const Navbar: React.FC = () => {

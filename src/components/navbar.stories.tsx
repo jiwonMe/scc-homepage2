@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Navbar from './navbar';
+import Navbar from '@/components/navbar';
 
 // Meta 정보 정의
 const meta: Meta<typeof Navbar> = {
