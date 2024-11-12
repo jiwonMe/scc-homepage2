@@ -103,7 +103,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="h-16"></div>
+      {/* <div className="h-16"></div> */}
       <nav className={cn(
         "fixed top-0 left-0 right-0 backdrop-blur-sm transition-all duration-200 z-50 flex justify-between items-center",
         isScrolled || isMobileMenuOpen ? 'bg-white border-gray-200' : 'bg-transparent border-white/10'

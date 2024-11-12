@@ -1,6 +1,9 @@
+'use client';
+
 import React from "react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface FeatureSectionProps {
   imageUrl: string;
@@ -35,11 +38,16 @@ export function FeatureSection({
           imagePosition === 'right' && "lg:flex-row-reverse"
         )}>
           {/* Image Container */}
-          <div className={cn(
-            // Width responsive settings
-            "w-96 lg:w-2/5",
-            // Order settings for mobile/desktop
-            "order-1 lg:order-none"
+          <motion.div 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className={cn(
+              // Width responsive settings
+              "w-96 lg:w-2/5",
+              // Order settings for mobile/desktop
+              "order-1 lg:order-none"
           )}>
             <div className={cn(
               // Aspect ratio container
@@ -62,7 +70,7 @@ export function FeatureSection({
                 quality={100}
               />
             </div>
-          </div>
+          </motion.div>
           
           {/* Text Content Container */}
           <div className={cn(
