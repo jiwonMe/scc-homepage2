@@ -15,7 +15,7 @@ export function HeroSection() {
   // Transform scroll progress to scale value with eased motion
   const scale = useTransform(scrollYProgress, 
     [0, 1], 
-    [3, 1],
+    [3, 1.1],
   );
   
   // Add y-position transform for parallax effect
@@ -62,7 +62,7 @@ export function HeroSection() {
       className={cn(
         /* Main container */
         "relative",
-        "h-[400vh]",
+        "h-[300vh]",
         "w-full"
       )}
     >
@@ -88,9 +88,10 @@ export function HeroSection() {
                 /* Hero background image */
                 "w-full h-full",
                 "object-cover",
-                "brightness-50"
+                // "brightness-50",
               )}
             />
+            <div className="absolute inset-0 bg-black/50" />
           </motion.div>
           
           {/* Content container - Moved inside the relative container */}
