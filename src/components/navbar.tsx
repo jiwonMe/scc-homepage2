@@ -24,6 +24,13 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  // window resize 시 모바일 메뉴 닫기
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      setIsMobileMenuOpen(false);
+    }
+  }, [isMobileMenuOpen]);
+
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -101,7 +108,7 @@ const Navbar: React.FC = () => {
         "fixed top-0 left-0 right-0 backdrop-blur-sm transition-all duration-200 z-50 flex justify-between items-center",
         isScrolled || isMobileMenuOpen ? 'bg-white border-gray-200' : 'bg-transparent border-white/10'
       )}>
-        <div className="container mx-auto px-8 flex justify-between items-center">
+        <div className="container mx-auto px-4 flex justify-between items-center">
         <div>
           {/* Logo */}
           <Link href="/" className={cn(
@@ -184,7 +191,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
         {/* Mobile Menu Button */}
-        {!isMobileMenuOpen && <div className="pr-8">
+        {!isMobileMenuOpen && <div className="pr-4">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={cn(
@@ -210,7 +217,7 @@ const Navbar: React.FC = () => {
               "opacity-0 pointer-events-none",
               isMobileMenuOpen ? "translate-y-0 opacity-100 pointer-events-auto" : ''
             )}>
-              <div className="px-8 pb-4 ">
+              <div className="px-4 pb-4 ">
                 <div className="container h-16 relative">
                 <div className="relative right-0 top-1/2 transform -translate-y-1/2 flex justify-between items-center">
                   {/* Logo */}
