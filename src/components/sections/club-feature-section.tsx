@@ -50,9 +50,10 @@ export function ClubFeatureSection({
           // Responsive max width
           "md:max-w-4xl"
         )}>
-          {features.map((feature) => (
+          {features.map((feature, index) => (
             <div 
               key={feature.id}
+              id={`feature${index + 1}`}
               className={cn(
                 // Card container
                 "flex flex-col",

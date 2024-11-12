@@ -91,9 +91,14 @@ export default function Home() {
     'faq'
   ];
 
+  const breakpoints = {
+    'hero': ['#main'],
+    'club-features': ['feature1', 'feature2', 'feature3', 'feature4'],
+  };
+
   return (
     <div className="min-h-screen">
-      <ScrollNavigation sections={sections} />
+      <ScrollNavigation sections={sections} breakpoints={breakpoints} />
       <Navbar />
       <section id="hero">
         <HeroSection />
