@@ -3,11 +3,15 @@ import { cn } from '@/lib/utils';
 
 export default function Footer() {
   return (
-    <footer>
+    <footer
+      className={cn(
+        "bg-gray-950 text-white"
+      )}
+    >
       {/* Desktop & Mobile Footer Container */}
       <div className={cn(
         /* Base styles */
-        "w-full bg-gray-950 text-white",
+        "w-full",
         /* Padding for different screens */
         "px-4 lg:px-8",
         /* Spacing between sections */
